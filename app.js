@@ -43,7 +43,7 @@ app.post('/',(req,res)=>{
 
     //make request
     const listId = "6d4890b84f"
-    const apiKey = "653de49aa2bacb30f3f5c3b724e92882-us1";
+    const apiKey = "653de49aa2bacb30f3f5c3b724e92882-us11";
     const url = "https://us11.api.mailchimp.com/3.0/lists/" + listId;
 
     const options = {
@@ -77,7 +77,7 @@ app.post("/failure",(req,res)=>{
 
 
 //when deploying on heroku we have to change port dynamically
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT || 3000,()=>{
     console.log("server is running on port 3000.");
 });
 
